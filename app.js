@@ -19,32 +19,10 @@ const PORT = process.env.PORT || 3000;
 // Security Middleware (Helmet)
 app.use(
   helmet({
-    contentSecurityPolicy: {
-      directives: {
-        defaultSrc: ["'self'"],
-        scriptSrc: [
-          "'self'",
-          "'unsafe-inline'",
-          "https://unpkg.com",
-          "https://cdn.jsdelivr.net",
-          "https://cdnjs.cloudflare.com"
-        ],
-        styleSrc: [
-          "'self'",
-          "'unsafe-inline'",
-          "https://fonts.googleapis.com",
-          "https://unpkg.com",
-          "https://cdn.jsdelivr.net"
-        ],
-        fontSrc: ["'self'", "https://fonts.gstatic.com", "data:"],
-        imgSrc: ["'self'", "data:", "https://images.unsplash.com", "https://*.google.com", "https://*.gstatic.com"],
-        connectSrc: ["'self'"],
-        objectSrc: ["'none'"],
-        mediaSrc: ["'self'"],
-        frameSrc: ["'self'", "https://www.google.com"]
-      }
-    },
-    crossOriginEmbedderPolicy: false
+    contentSecurityPolicy: false,
+    crossOriginResourcePolicy: false,
+    crossOriginEmbedderPolicy: false,
+    frameguard: false
   })
 );
 
