@@ -1,0 +1,59 @@
+<header class="site-header" id="siteHeader">
+  <div class="container header-container">
+    <a href="/" class="brand-logo" aria-label="Köse Yapı Dekorasyon Ana Sayfa">
+      <span class="logo-main">KÖSE YAPI</span>
+      <span class="logo-sub">DEKORASYON</span>
+    </a>
+
+    <nav class="desktop-nav" aria-label="Ana Navigasyon">
+      <ul class="nav-list">
+        <li><a href="#anasayfa" class="nav-link active">Ana Sayfa</a></li>
+        <li><a href="#hakkimizda" class="nav-link">Hakkımızda</a></li>
+        <li><a href="#urunler" class="nav-link">Ürünler</a></li>
+        <li><a href="#hizmetler" class="nav-link">Hizmetler</a></li>
+        <li><a href="#neden-biz" class="nav-link">Neden Biz?</a></li>
+        <li><a href="#iletisim" class="nav-link">İletişim</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <a href="tel:<%= company.phoneRaw %>" class="btn btn-header-cta">
+        <i data-lucide="phone" class="btn-icon"></i>
+        <span><%= company.phone %></span>
+      </a>
+
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Menüyü Aç/Kapat" aria-expanded="false">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu-inner">
+      <nav class="mobile-nav">
+        <ul class="mobile-nav-list">
+          <li><a href="#anasayfa" class="mobile-nav-link">Ana Sayfa</a></li>
+          <li><a href="#hakkimizda" class="mobile-nav-link">Hakkımızda</a></li>
+          <li><a href="#urunler" class="mobile-nav-link">Ürünler</a></li>
+          <li><a href="#hizmetler" class="mobile-nav-link">Hizmetler</a></li>
+          <li><a href="#neden-biz" class="mobile-nav-link">Neden Biz?</a></li>
+          <li><a href="#iletisim" class="mobile-nav-link">İletişim</a></li>
+        </ul>
+      </nav>
+
+      <div class="mobile-menu-footer">
+        <a href="tel:<%= company.phoneRaw %>" class="btn btn-primary btn-full">
+          <i data-lucide="phone"></i>
+          <span>Bize Ulaşın (<%= company.phone %>)</span>
+        </a>
+        <a href="<%= company.mapsUrl %>" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-full mt-2">
+          <i data-lucide="map-pin"></i>
+          <span>Yol Tarifi Al</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
